@@ -18,6 +18,23 @@
     object-fit: cover;
     object-position: center;
 }
+.title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    color: #3F3F3F;
+}
+.link{
+    margin-top: 10px;
+    display: block;
+}
+.link::after{
+    content: '\2192';
+    margin-left: 10px;
+}
+.link:hover{
+    opacity: 0.3;
+}
 
 
 
@@ -30,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-top: 50px;
+    padding: 50px 0 50px 0;
 }
 .header__logo{
     display: flex;
@@ -66,10 +83,219 @@
 .header__info{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .header__title{
     font-weight: 600;
     font-size: 90px;
     line-height: 100px;
+    color: #FFFFFF;
+}
+
+
+/* Наша философия */
+.philosiphy__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F1F1F1;
+    min-height: 600px;
+    transform: translateY(-50%);
+}
+.philosiphy__text{
+    display: grid;
+    align-items: space-between;
+    padding: 70px;
+}
+.philosiphy__img{
+    max-height: 600px;
+}
+.philosiphy__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #3F3F3F;
+}
+.philosiphy__subtitle{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    color: #3F3F3F;
+    margin-top: 10px;
+}
+.philosiphy__link{
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: #3F3F3F;
+}
+
+/* Наши услуги */
+.service{
+    margin-bottom: -17%;
+}
+.service__top{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+}
+.service__title{
+    font-size: 36px;
+}
+.service__subtitle{
+    font-weight: 400;
+    font-size: 28.98px;
+    line-height: 39px;
+    color: #BEBEBE;
+}
+.service__logo{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+}
+.service__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 63px;
+    row-gap: 100px;
+    margin-top: 50px;
+}
+.service__img{
+    display: block;
+    width: 358px;
+    height: 358px;
+    overflow: hidden;transition: .3s ease-in-out;
+}
+.service__img img{
+    transition: .3s ease-in-out;
+}
+.service__img:hover img{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.service__link{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    color: #3F3F3F;
+}
+.service__bottom{
+    max-width: 780px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.service__black{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-color: #000;
+    transform: translateY(-75%);
+    z-index: -100;
+}
+.service__text{
+    font-weight: 400;
+    font-size: 28.98px;
+    line-height: 39px;
+    color: #BEBEBE;
+}
+.service__bottom_link{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+/* Команда */
+.team__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+.team__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #3F3F3F;
+}
+.team__title span{
+    color: #FE8F1D;
+}
+.team__subtitle{
+    font-weight: 400;
+    font-size: 28.98px;
+    line-height: 33px;
+    color: #BEBEBE;
+    margin-top: 10px;
+}
+.team__link{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: #3F3F3F;
+}
+.team{
+    padding-bottom: 200px;
+}
+
+
+/* Лицом к лицу */
+.faceToFace{
+    height: 100vh;
+    background-image: url('../img/faceToFace.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.faceToFace__container{
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+.faceToFace__text{
+    display: grid;
+    gap: 10px;
+    max-width: 555px;
+}
+.faceToFace__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #FFFFFF;
+}
+.faceToFace__subtitle{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #BEBEBE;
+}
+.faceToFace__link{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Состояния и декораторы */
+.colorWhite{
     color: #FFFFFF;
 }
