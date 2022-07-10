@@ -1,0 +1,75 @@
+/* Импорт шрифта */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* Служебные классы */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* Стили */
+.header{
+    height: 100vh;
+    background-color: #000;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 50px;
+}
+.header__logo{
+    display: flex;
+    gap: 10px;
+}
+.logo__img{
+    width: 38.26px;
+    height: 39.38px;
+}
+.logo__text{
+    font-weight: 600;
+    font-size: 27px;
+    color: #FFFFFF;
+    line-height: 16px;
+}
+.logo__text span{
+    font-size: 12px;
+}
+.menu__list, .menu__icons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.menu__item a, .menu__icon a{
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+.menu__item a:hover, .menu__icon a:hover, .menu__item-active a{
+    color: #BEBEBE;
+}
+.header__info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.header__title{
+    font-weight: 600;
+    font-size: 90px;
+    line-height: 100px;
+    color: #FFFFFF;
+}
