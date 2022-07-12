@@ -3,6 +3,7 @@
 
 *{
     font-family: 'Open Sans', sans-serif;
+    color: #3F3F3F;
 }
 
 
@@ -22,7 +23,6 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
-    color: #3F3F3F;
 }
 .link{
     margin-top: 10px;
@@ -40,7 +40,7 @@
 
 /* Стили */
 .header{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
 }
 .header__nav{
@@ -113,13 +113,11 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 62px;
-    color: #3F3F3F;
 }
 .philosiphy__subtitle{
     font-weight: 400;
     font-size: 28px;
     line-height: 38px;
-    color: #3F3F3F;
     margin-top: 10px;
 }
 .philosiphy__link{
@@ -127,7 +125,6 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 42px;
-    color: #3F3F3F;
 }
 
 /* Наши услуги */
@@ -181,7 +178,6 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 42px;
-    color: #3F3F3F;
 }
 .service__bottom{
     max-width: 780px;
@@ -220,7 +216,6 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
-    color: #3F3F3F;
 }
 .team__title span{
     color: #FE8F1D;
@@ -236,7 +231,6 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 41px;
-    color: #3F3F3F;
 }
 .team{
     padding-bottom: 200px;
@@ -281,6 +275,179 @@
 }
 
 
+/* Обратная связь */
+.feedback__container{
+    margin: 150px auto;
+}
+.feedback__top{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 100px;
+    align-items: center;
+}
+.feedback__title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+}
+.feedback__subtitle{
+    font-weight: 400;
+    font-size: 28.98px;
+    line-height: 39px;
+    color: #BEBEBE;
+}
+.feedback__link{
+    font-weight: 400;
+    font-size: 30.1376px;
+    line-height: 41px;
+}
+.feedback__list{
+    margin-top: 100px;
+    display: flex;
+    gap: 70px;
+}
+.feedback__item{
+   width: 450px;
+}
+.feedback__name{
+    font-weight: 700;
+    font-size: 28px; 
+    line-height: 39px;
+}
+.feedback__feedback{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+.feedback__arrows{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Блог */
+.blog{
+    background-color: #000;
+    min-height: 100vh;
+}
+.blog__text{
+    max-width: 600px;
+    padding-top: 100px;
+}
+.blog__title{
+    display: block;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #FE8F1D;
+}
+.blog__subtitle{
+    font-weight: 400;
+    font-size: 28.98px;
+    line-height: 39px;
+    color: #BEBEBE;
+}
+.blog__list{
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 63px;
+}
+.blog__social{
+    padding-bottom: 100px;
+}
+
+
+/* Соц сети */
+.social{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+.social__title{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    color: #FFFFFF;
+}
+.social__list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.social__item{
+    color: #FFFFFF;
+    fill: #FFFFFF;
+}
+
+
+/* Контакты */
+.contacts__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 200px;
+    margin-top: 150px;
+}
+.form__title{
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+}
+.form__button{
+    margin-top: 50px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+}
+.form__input{
+    width: 100%;
+    border-bottom: 3px solid #3F3F3F;
+    padding: 10px 0px;
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+}
+.form__input::placeholder{
+    color: #BEBEBE;
+}
+.contacts__map{
+    margin-bottom: 150px;
+}
+.map{
+    max-height: 357px;
+    overflow: hidden;
+}
+.map__info{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+
+/* Подвал */
+.footer{
+    background-color: #000;
+    padding: 50px 0px;
+}
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo-footer{
+    margin-bottom: 30px;
+}
+.menu__list-footer{
+    display: grid;
+    gap: 15px;
+}
+.map__info-footer{
+    color: #FFFFFF;
+}
 
 
 
