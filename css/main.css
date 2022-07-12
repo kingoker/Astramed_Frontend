@@ -65,6 +65,7 @@
 }
 .logo__text span{
     font-size: 12px;
+    color: #FFFFFF;
 }
 .menu__list, .menu__icons{
     display: flex;
