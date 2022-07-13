@@ -81,6 +81,32 @@
 .menu__item a:hover, .menu__icon a:hover, .menu__item-active a{
     color: #BEBEBE;
 }
+.search{
+    fill: #FFFFFF;
+    color: #FFFFFF;
+}
+.search__icon{
+    width: 22px;
+    height: 22px;
+}
+.profile__icon{
+    width: 22px;
+    height: 23px;
+}
+.language{
+    display: flex;
+    align-items: center;
+}
+.language::after{
+    content: '';
+    margin-left: 5px;
+    border: solid #FFFFFF;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 .header__info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -162,10 +188,13 @@
     row-gap: 100px;
     margin-top: 50px;
 }
+.service__item:nth-child(4) a, .service__item:nth-child(5) a, .service__item:nth-child(6) a{
+    color: #FFFFFF;
+}
 .service__img{
     display: block;
-    width: 358px;
-    height: 358px;
+    min-width: 358px;
+    min-height: 358px;
     overflow: hidden;transition: .3s ease-in-out;
 }
 .service__img img{
@@ -383,12 +412,17 @@
     color: #FFFFFF;
     fill: #FFFFFF;
 }
+.instagram__icon, .facebook__icon{
+    fill: #FFFFFF;
+    width: 30px;
+    height: 30px;
+}
 
 
 /* Контакты */
 .contacts__container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.1fr;
     gap: 200px;
     margin-top: 150px;
 }
@@ -423,10 +457,28 @@
     max-height: 357px;
     overflow: hidden;
 }
+.map__text{
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+}
 .map__info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
+}
+.location__icon{
+    width: 26px;
+    height: 32px;
+    stroke: #3F3F3F;
+}
+.phone__icon{
+    width: 32px;
+    height: 32px;
+    stroke: #3F3F3F;
 }
 
 
@@ -439,6 +491,12 @@
     display: flex;
     justify-content: space-between;
 }
+.footer__text{
+    margin-top: 0px;
+}
+.map__info-footer{
+    color: #FFFFFF;
+}
 .header__logo-footer{
     margin-bottom: 30px;
 }
@@ -446,11 +504,26 @@
     display: grid;
     gap: 15px;
 }
-.map__info-footer{
-    color: #FFFFFF;
+.location__icon-footer, .phone__icon-footer, .map__info-footer{
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
 }
 
-
+/* Авторские права */
+.copyrighy__container{
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #7E7E7E;
+    padding-top: 20px;
+}
+.copyrighy__asyramed{
+    text-align: center;
+}
+.created__kingdesignn{
+    text-decoration: underline;
+}
 
 
 
