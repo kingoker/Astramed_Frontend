@@ -5,8 +5,9 @@
     font-family: 'Open Sans', sans-serif;
     color: #3F3F3F;
 }
-
-
+.lock{
+    overflow: hidden;
+}
 
 /* Служебные классы */
 .container{
@@ -30,18 +31,47 @@
 }
 .link::after{
     content: '\2192';
-    margin-left: 10px;
+    margin-left: 5px;
+    transition: .4s;
 }
 .link:hover{
-    opacity: 0.3;
+    opacity: 0.8;
+}
+.link:hover::after{
+    margin-left: 15px;
 }
 
 
+/* Скрол бар */
+:root {
+    --scroll-bar-color: #b0b0b0;
+    --scroll-thumb-color: #FE8F1D;
+    --text-color-light: #ffb76f;
+}
+::-webkit-scrollbar{
+    width: .50rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .6rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: .6rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color-light);
+}
 
-/* Стили */
+
+/* ГЛАВНАЯ СТРАНИЦА */
+/* вверх */
 .header{
     min-height: 100vh;
     background-color: #000;
+}
+.header__body{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
 }
 .header__nav{
     display: flex;
@@ -81,13 +111,69 @@
 .menu__item a:hover, .menu__icon a:hover, .menu__item-active a{
     color: #BEBEBE;
 }
+.menu__icons{
+    position: relative;
+}
+.menu__burger{
+    display: none;
+}
+.menu__icon-search{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
 .search{
-    fill: #FFFFFF;
-    color: #FFFFFF;
+    position: absolute;
+    right: 150px;
+    width: 30px;
+    height: 40px;
+    transition: width 0.5s ease;
+    padding: 10px;
+    overflow: hidden;
+}
+.seacrch__active{
+    position: absolute;
+    width: 250px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+.seacrch__active .search__icon{
+    fill: #3F3F3F;
+    color: #3F3F3F;
 }
 .search__icon{
     width: 22px;
     height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: pointer;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+}
+.search__input{
+    position: relative;
+    width: 200px;
+    height: 22px;
+    left: 30px;
+    top: -22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search__input input{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+}
+.search__input input::placeholder{
+    color: #d7d7d7;
 }
 .profile__icon{
     width: 22px;
@@ -156,7 +242,7 @@
 
 /* Наши услуги */
 .service{
-    margin-bottom: -17%;
+    margin-bottom: -30%;
 }
 .service__top{
     position: relative;
@@ -306,6 +392,9 @@
 
 
 /* Обратная связь */
+.feedback{
+    overflow: hidden;
+}
 .feedback__container{
     margin: 150px auto;
 }
@@ -332,6 +421,7 @@
     line-height: 41px;
 }
 .feedback__list{
+    margin-right: -50%;
     margin-top: 100px;
     display: flex;
     gap: 70px;
@@ -349,19 +439,34 @@
     font-size: 24px;
     line-height: 33px;
 }
+.swiper-wrapper{
+    cursor: pointer;
+}
 .feedback__arrows{
     margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
+}
+.prev__icon{
+    transition: 0.3s;
+}
+.prev__icon:hover{
+    transform: translateX(-0.35rem);
+}
+.next__icon{
+    transition: 0.3s;
+}
+.next__icon:hover{
+    transform: translateX(0.35rem);
 }
 
 
 /* Блог */
 .blog{
     background-color: #000;
-    min-height: 100vh;
 }
 .blog__text{
     max-width: 600px;
@@ -448,7 +553,7 @@
     line-height: 44px;
 }
 .form__input::placeholder{
-    color: #BEBEBE;
+    color: #d7d7d7;
 }
 .contacts__map{
     margin-bottom: 150px;
@@ -471,7 +576,7 @@
     line-height: 27px;
 }
 .location__icon{
-    width: 26px;
+    width: 30px;
     height: 32px;
     stroke: #3F3F3F;
 }
@@ -514,7 +619,7 @@
     display: grid;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
     border-top: 1px solid #7E7E7E;
     padding-top: 20px;
 }
@@ -527,8 +632,74 @@
 
 
 
+/* другие страницы */
+.header-half{
+    min-height: auto;
+    padding-bottom: 100px;
+}
+.header__title{
+    position: relative;
+    height: 334px;
+    display: grid;
+    align-items: center;
+}
+.title__text{
+    position: absolute;
+    left: 159px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 87px;
+    color: #FFFFFF;
+}
+.halfheader__img{
+    width: auto;
+}
 
-
+.aboutPhilosophy__container{
+    padding-top: 150px;
+}
+.aboutPhilosophy__list{
+    display: grid;
+    gap: 70px;
+}
+.aboutPhilosophy__item{
+    display: flex;
+    gap: 30px;
+}
+.aboutPhilosophy__title{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 28px;
+    color: #FE8F1D;
+}
+.aboutPhilosophy__subtitle{
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    color: #3F3F3F;
+}
+.aboutPhilosophy__header{
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    color: #3F3F3F;
+    margin: 0px auto 50px 0px;
+}
+.aboutTeam {
+    padding-bottom: 150px;
+}
+.BlackFeedback{
+    background-color: #000;
+}
+.aboutFeedback__container{
+    padding: 150px 0px;
+    margin: 0 auto;
+}
+.about__img{
+    min-width: 480px;
+    max-height: 480px;
+}
 
 
 
@@ -537,6 +708,43 @@
 
 
 /* Состояния и декораторы */
+.feedback__arrow-white{
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+}
 .colorWhite{
     color: #FFFFFF;
+}
+.darkGreyFill{
+    fill: #3F3F3F;
+}
+.darkGreyStroke{
+    stroke: #3F3F3F;
+}
+.darkGrey{
+    color: #3F3F3F;
+}
+.lightgrey{
+    color: #BEBEBE;
+}
+.blog-white{
+    background-color: #FFFFFF;
+}
+.line{
+    height: 1px;
+    width: 100%;
+    margin: 150px 0px;
+    background-color: #BEBEBE;
+}
+.width100vh{
+    width: auto;
+}
+.marbot-100{
+    margin-bottom: 100px;
+}
+.marbot-150{
+    margin-bottom: 150px;
+}
+.blog__social-noPadding{
+    padding-bottom: 0px;
 }
