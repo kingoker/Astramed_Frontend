@@ -56,6 +56,10 @@
     }
     .aboutTeam {
         margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .AboutBlog__text{
+        padding-top: 0px;
     }
     .copyrighy__container{
         margin-top: 20px;
