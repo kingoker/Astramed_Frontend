@@ -64,6 +64,9 @@
     .copyrighy__container{
         margin-top: 20px;
     }
+    .procedure__link{
+        width: 1000px;
+    }
 }
 @media (max-width: 991px){
     .location__icon{
@@ -111,6 +114,8 @@
     .header__title {
         position: absolute;
         top: 200px;
+    }
+    .header__title-center{
         text-align: center;
     }
     .service__list {
@@ -133,7 +138,13 @@
         min-width: 380px;
         max-height: 380px;
     }
-    
+    .procedure__link{
+        width: 800px;
+    }
+    .procedure__result, .procedure__result-img{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 859px){
     .search{
@@ -172,7 +183,25 @@
     .menu__icons{
         margin-top: 30px;
     }
-
+    .contacts__list{
+        grid-column:none;
+        gap: 50px 50px;
+    }
+    .contacts__text{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    .contacts__text-bigger{
+        font-size: 20px;
+    }
+    
+    .procedure__link{
+        width: 700px;
+    }
+    .post__container{
+        grid-template-columns: 1fr;
+    }
     /* Адаптивное меню */
     .menu__burger{
         display: block;
@@ -263,6 +292,9 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .member__container{
+        grid-template-columns: 1fr;
+    }
     .blog__list {
         grid-template-columns: 1fr;
     }
@@ -283,6 +315,16 @@
     .aboutPhilosophy__item {
         flex-direction: column;
     }
+    .contacts__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .registration__title{
+        font-size: 48px;
+    }
+    .procedure__link{
+        width: 600px;
+    }
 }
 @media (max-width: 560px){
     .service__bottom_link {
@@ -290,6 +332,9 @@
     }
     .philosiphy__container {
         background-color: #fff;
+    }
+    .procedure__link{
+        width: 500px;
     }
 }
 @media (max-width: 480px){
@@ -326,5 +371,8 @@
     }
     .copyrighy__container {
         margin-top: 20px;
+    }
+    .procedure__link{
+        width: 400px;
     }
 }
