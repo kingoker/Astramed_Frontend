@@ -27,21 +27,6 @@ if(iconMenu){
 }
 
 
-// Изменение аквтивного пункта меню
-var menu = document.getElementById('menu__list');
-
-for(let i = 0; i < menu.children.length-1; i++){
-    menu.children[i].querySelector('a').classList.remove('menu__item-active');
-    menu.children[i].querySelector('a').onclick = activeMenu;
-}
-function activeMenu(){
-    for(let i = 0; i < menu.children.length-1; i++){
-        menu.children[i].querySelector('a').classList.remove('menu__item-active');
-    }
-    this.classList.add('menu__item-active');
-}
-
-
 // Карусель
 var swiper = new Swiper(".swiper", {
     loop: true,
