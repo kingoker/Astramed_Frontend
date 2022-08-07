@@ -72,6 +72,13 @@
     .location__icon{
         width: 40px;
     }
+    .location__icon-footer{
+        width: 30px;
+    }
+    .map__info{
+        gap: 8px;
+    }
+    
     .social__title-footer {
         font-size: 20px;
         line-height: auto;
@@ -135,7 +142,7 @@
         line-height: 30px;
     }
     .about__img {
-        min-width: 380px;
+        max-width: 380px;
         max-height: 380px;
     }
     .procedure__link{
@@ -275,6 +282,9 @@
         font-size: 60px;
         line-height: 70px;
     }
+    .service{
+        margin-bottom: -50%;
+    }
     .service__top {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -325,10 +335,21 @@
     .procedure__link{
         width: 600px;
     }
+    .feedback__list{
+        margin-right: -100%;
+    }
+    .feedback{
+        margin: 70px auto;
+    }
 }
 @media (max-width: 560px){
+    .title__text{
+        font-size: 55px;
+        line-height: 60px;
+    }
     .service__bottom_link {
         font-size: 28px;
+        padding-bottom: 70px;
     }
     .philosiphy__container {
         background-color: #fff;
@@ -336,18 +357,16 @@
     .procedure__link{
         width: 500px;
     }
-}
-@media (max-width: 480px){
-    .philosiphy__title {
+    .philosiphy__title, .aboutPhilosophy__title{
         font-size: 28px;
         line-height: 30px;
     }   
-    .philosiphy__subtitle {
+    .philosiphy__subtitle, .aboutPhilosophy__subtitle {
         font-size: 18px;
         line-height: 22px;
     }
     .philosiphy__link {
-        font-size: 24px;
+        font-size: 25px;
         line-height: 26px;
     }
     .header__title {
@@ -358,17 +377,168 @@
         height: 970px;
         transform: translateY(-96%);
     }
-    .team {
-        margin-top: -700px;
+    .team { 
+        padding-bottom: 100px;
+        margin-top: -800px;
+    }
+    .aboutTeam{
+        margin: 0px;
+    }
+    .blog__title{
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .team__title, .aboutPhilosophy__header{
+        font-size: 28px;
+        line-height: 30px;
     }
     .faceToFace__title {
-        font-size: 38px;
-        line-height: 45px;
+        font-size: 28px;
+        line-height: 30px;
     }
     .feedback__title {
-        font-size: 38px;
-        line-height: 42px;
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 20px;
     }
+    .form__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .social__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .social__title-footer{
+        font-size: 20px;
+    }
+    .service__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .service__subtitle, .team__subtitle, .faceToFace__subtitle, .blog__subtitle{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .blog__subtitle-bigger{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .feedback__subtitle{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .service__link, .service__bottom_link, .faceToFace__link, .feedback__link{
+        font-size: 25px;
+    }
+    .service__text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .form__input{
+        font-size: 25px;
+    }
+    .form__button{
+        font-size: 25px;
+    }
+    .service__item:nth-child(5) a{
+        color: #FFFFFF;
+    }
+    .feedback__name{
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .feedback__feedback{
+        font-size: 20px;
+        line-height: 22px;
+        max-width: 350px;
+    }
+    .blog__text{
+        padding-top: 70px;
+    }
+    .about__img{
+        min-width: 350px;
+        height: 350px;  
+        overflow: hidden;
+    }
+    .contacts__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .blog__item-subtitle{
+        font-size: 25px;
+    }
+    .profile__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .profile__subtitle, .profile__text{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .review__subtitle{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .review__text{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .post__title{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .post__info{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .post__text{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .procedure__subtitle{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .procedure__subtitle:nth-child(2){
+        margin-bottom: 20px;
+    }
+    .procedure__text{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .registration__title{
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .reg__input{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .member__img{
+        max-height: 365px;
+        max-width: 365px;
+    }
+    .quote__text{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .member__subtitle{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .member__text{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .member__link{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+@media (max-width: 480px){
     .copyrighy__container {
         margin-top: 20px;
     }

@@ -350,6 +350,7 @@
     line-height: 41px;
 }
 .team{
+    margin-top: -200px;
     padding-bottom: 200px;
 }
 
@@ -360,7 +361,7 @@
     background-image: url('../img/faceToFace.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover fixed; 
 }
 .faceToFace__container{
     display: grid;
@@ -523,10 +524,14 @@
     color: #FFFFFF;
     fill: #FFFFFF;
 }
-.instagram__icon, .facebook__icon{
+.instagram__icon, .facebook__icon, .telegram__icon{
     fill: #FFFFFF;
     width: 30px;
     height: 30px;
+}
+.telegram{
+    width: 32px;
+    height: 32px;
 }
 
 
@@ -583,12 +588,10 @@
 }
 .map__info a{
     transition: color 0.3s ease;
+    text-decoration: underline;
 }
 .map__info a:hover{
     color: #7E7E7E;
-}
-.tel{
-    color: #3F3F3F;
 }
 .location__icon{
     width: 30px;
@@ -613,10 +616,7 @@
 .footer__text{
     margin-top: 0px;
 }
-.map__info-footer, .map__info_footer-tel{
-    color: #FFFFFF;
-}
-.tel__footer{
+.map__info-footer{
     color: #FFFFFF;
 }
 .header__logo-footer{
@@ -727,6 +727,13 @@
     font-weight: 400;
     line-height: 27px;
 }
+.contacts__text a{
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+.contacts__text a:hover{
+    color: #7E7E7E;
+}
 .contacts__text-bigger{
     font-size: 24px;
 }
@@ -813,7 +820,7 @@
     opacity: 1;
 }
 .procedure__result{
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
 }
 .procedure__result-img{
     display: flex;
@@ -928,7 +935,7 @@ textarea{
     gap: 100px 52px;
 }
 .team__list-img{
-    height: 417px;
+    height: 365px;
     width: 365px;
 }
 
@@ -989,6 +996,9 @@ textarea{
 }
 .darkGreyStroke{
     stroke: #3F3F3F;
+}
+.whiteStroke{
+    stroke: #fff;
 }
 .darkGrey{
     color: #3F3F3F;
