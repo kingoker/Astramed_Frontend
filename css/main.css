@@ -361,7 +361,7 @@
     background-image: url('../img/faceToFace.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover fixed; 
+    background-size: cover; 
 }
 .faceToFace__container{
     display: grid;
@@ -588,7 +588,7 @@
 }
 .map__info a{
     transition: color 0.3s ease;
-    text-decoration: underline;
+    border-bottom: 1px solid;
 }
 .map__info a:hover{
     color: #7E7E7E;
@@ -729,7 +729,7 @@
 }
 .contacts__text a{
     transition: color 0.3s ease;
-    text-decoration: underline;
+    border-bottom: 1px solid;
 }
 .contacts__text a:hover{
     color: #7E7E7E;
