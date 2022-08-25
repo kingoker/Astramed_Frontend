@@ -3,7 +3,23 @@
 
 *{
     font-family: 'Open Sans', sans-serif;
-    color: #3F3F3F;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+input{
+    border: none;
+}
+:focus,:active{outline: none;}
+
+/* Цвет календаря */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+body{
+    padding: 0;
+	margin: 0;
+	border: 0;
 }
 .lock{
     overflow: hidden;
@@ -24,10 +40,14 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
+    margin: 0px;
+    color: #3F3F3F;
 }
 .link{
     margin-top: 10px;
     display: block;
+    text-decoration: none;
+    color: #3F3F3F;
 }
 .link::after{
     content: '\2192';
@@ -63,6 +83,14 @@
 }
 
 
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: inset 0 0 0 50px black;
+    box-shadow: inset 0 0 0 50px black;
+    -webkit-text-fill-color: #FE8F1D;
+    font-size: 30px;
+}
+
+
 /* ГЛАВНАЯ СТРАНИЦА */
 /* вверх */
 .header{
@@ -72,7 +100,7 @@
 .header__body{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 77%;
 }
 .header__nav{
     display: flex;
@@ -83,6 +111,7 @@
 .header__logo{
     display: flex;
     gap: 10px;
+    text-decoration: none;
 }
 .logo__img{
     width: 38.26px;
@@ -93,6 +122,7 @@
     font-size: 27px;
     color: #FFFFFF;
     line-height: 16px;
+    margin: 0;
 }
 .logo__text span{
     font-size: 12px;
@@ -102,12 +132,17 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    margin: 0px;
+}
+.menu__item, .menu__icons{
+    list-style: none;
 }
 .menu__item a, .menu__icon a{
     font-weight: 400;
     font-size: 20px;
     color: #FFFFFF;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 .menu__item a:hover, .menu__icon a:hover, .menu__item-active a{
     color: #BEBEBE;
@@ -123,14 +158,17 @@
     align-items: center;
     justify-content: center;
 }
-.search{
+.search {
     position: absolute;
-    right: 150px;
+    right: 0px;
     width: 30px;
-    height: 40px;
+    height: 47px;
     transition: width 0.5s ease;
     padding: 10px;
     overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .seacrch__active{
     position: absolute;
@@ -219,6 +257,7 @@
     display: grid;
     align-items: space-between;
     padding: 70px;
+    color: #3F3F3F;
 }
 .philosiphy__img{
     max-height: 600px;
@@ -258,7 +297,7 @@
     font-weight: 400;
     font-size: 28.98px;
     line-height: 39px;
-    color: #BEBEBE;
+    color: grey;
 }
 .service__logo{
     position: absolute;
@@ -281,7 +320,7 @@
 .service__img{
     display: block;
     min-width: 358px;
-    min-height: 358px;
+    height: 358px;
     overflow: hidden;transition: .3s ease-in-out;
 }
 .service__img img{
@@ -291,10 +330,11 @@
     -webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
-.service__link{
+.service__link {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 0px;
 }
 .service__bottom{
     max-width: 780px;
@@ -350,7 +390,7 @@
     line-height: 41px;
 }
 .team{
-    margin-top: -200px;
+    margin-top: 100px;
     padding-bottom: 200px;
 }
 
@@ -361,7 +401,7 @@
     background-image: url('../img/faceToFace.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover fixed; 
+    background-size: cover; 
 }
 .faceToFace__container{
     display: grid;
@@ -474,6 +514,9 @@
     max-width: 600px;
     padding-top: 150px;
 }
+.blog__category{
+    margin-top: 10px;
+}
 .blog__title{
     display: block;
     font-weight: 700;
@@ -493,6 +536,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 63px;
 }
+
 .blog__social{
     padding-bottom: 100px;
 }
@@ -553,6 +597,8 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 41px;
+    background: none;
+    border: none;
 }
 .form__input{
     width: 100%;
@@ -588,7 +634,12 @@
 }
 .map__info a{
     transition: color 0.3s ease;
-    text-decoration: underline;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: #3F3F3F;
+}
+.map__info_footer a{
+    color: white;
 }
 .map__info a:hover{
     color: #7E7E7E;
@@ -605,9 +656,9 @@
 }
 
 /* Подвал */
-.footer{
+.footer {
     background-color: #000;
-    padding: 50px 0px;
+    padding: 50px 0px 25px 0;
 }
 .footer__container{
     display: flex;
@@ -632,9 +683,9 @@
 }
 
 /* Авторские права */
-.copyrighy__container{
-    display: grid;
-    justify-content: center;
+.copyrighy__container {
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
     margin-top: 50px;
     border-top: 1px solid #7E7E7E;
@@ -642,9 +693,11 @@
 }
 .copyrighy__asyramed{
     text-align: center;
+    color: grey;
 }
 .created__kingdesignn{
     text-decoration: underline;
+    color: grey;
 }
 
 
@@ -664,8 +717,8 @@
     position: absolute;
     left: 159px;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 87px;
+    font-size: 48px;
+    line-height: 50px;
     color: #FFFFFF;
 }
 .halfheader__img{
@@ -675,13 +728,12 @@
 .aboutPhilosophy__container{
     padding-top: 150px;
 }
-.aboutPhilosophy__list{
+.aboutPhilosophy__list {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
 }
 .aboutPhilosophy__item{
-    display: flex;
-    gap: 30px;
 }
 .aboutPhilosophy__title{
     font-weight: 700;
@@ -689,11 +741,14 @@
     line-height: 28px;
     color: #FE8F1D;
 }
-.aboutPhilosophy__subtitle{
+.aboutPhilosophy__text{
+    margin-top: 20px;
+}
+.aboutPhilosophy__subtitle {
     margin-top: 10px;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 18px;
+    line-height: 26px;
     color: #3F3F3F;
 }
 .aboutPhilosophy__header{
@@ -701,7 +756,6 @@
     font-size: 48px;
     line-height: 65px;
     color: #3F3F3F;
-    margin: 0px auto 50px 0px;
 }
 .aboutTeam {
     padding-bottom: 150px;
@@ -714,8 +768,7 @@
     margin: 0 auto;
 }
 .about__img{
-    min-width: 480px;
-    max-height: 480px;
+    max-height: 350px;
 }
 .contacts__list{
     display: grid;
@@ -729,7 +782,8 @@
 }
 .contacts__text a{
     transition: color 0.3s ease;
-    text-decoration: underline;
+    border-bottom: 1px solid;
+    text-decoration: none;
 }
 .contacts__text a:hover{
     color: #7E7E7E;
@@ -741,11 +795,12 @@
     display: flex;
     justify-content: start;
 }
+
 /* post */
 .post__container{
     padding: 150px 0 100px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 .post__title{
@@ -754,14 +809,29 @@
     line-height: 49px;
 }
 .post__text{
-    font-family: 'Alice';
     font-weight: 400;
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 28px;
     color: #7E7E7E;
 }
+.post__textLinks{
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #7E7E7E;
+}
+.post__textLinks span{
+    color: #D2D2D2;
+    font-size: 18px;
+    font-style: italic;
+}
+.post__top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
 .post__img{
-    max-width: 600px;
     max-height: 600px;
 }
 .post__info{
@@ -780,10 +850,11 @@
 .procedure__content{
     max-width: 800px;
 }
-.procedure__subtitle{
+.procedure__subtitle {
     font-size: 32px;
     line-height: 42px;
     color: #7E7E7E;
+    align-self: self-start;
 }
 .procedure__text{
     font-size: 26px;
@@ -833,6 +904,7 @@
 }
 textarea{
     resize: none;
+    border: none;
 }
 .allreviews__container{
     display: flex;
@@ -845,9 +917,9 @@ textarea{
     color: #FFFFFF;
     margin-bottom: 30px;
 }
-.review__text{
-    font-size: 30px;
-    line-height: 40px;
+.review__text {
+    font-size: 22px;
+    line-height: 28px;
     color: #BEBEBE;
 }
 .review{
@@ -866,6 +938,16 @@ textarea{
 .review a:hover{
     color: #7E7E7E;
 }
+.member__review{
+    margin-top: 150px;
+}
+.review__form_member{
+    margin-top: 0px;
+}
+.review__subtitle_member{
+    margin-bottom: 0px;
+}
+
 
 /* Регистрация */
 .registration__container{
@@ -973,10 +1055,103 @@ textarea{
     line-height: 42px;
 }
 .quote__text{
-    margin-top: 30px;
     font-weight: 400;
     font-size: 28px;
     line-height: 38px;
+}
+.quote__text-top{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #BEBEBE;
+}
+
+
+/* Доп информация */
+.info{
+    margin: 50px 0px;
+}
+.info__text{
+    font-size: 13px;
+}
+
+
+/* Раскрывающийся список */
+.accordion {
+  margin-top: 30px;
+}
+.accordion section{
+  display: none;
+  height: 0px;
+  transition: height 0.5s;
+}
+.accordion-active section{
+    display: block;
+    height: auto;
+}
+.according__link {
+    display: grid;
+    align-items: center;
+    position: relative;
+    color: grey;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: underline;
+}
+.according__link:hover{
+    opacity: 0.5;
+}
+.according__link:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid grey;
+  border-top: 2px solid grey;
+  transform: rotate(-135deg);
+  transition: 0.4s transform;
+}
+.according-active .according__link:after{
+  transform: rotate(45deg);
+  top: 16px;
+}
+
+/* Партнеры */
+.partners__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.partners__item{
+    height: 100px;
+}
+.partners__item img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.7s ease 0s;
+}
+.partners__item img:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    opacity: 1; 
+}
+
+/* Страница прайс листа*/
+.priceList__link{
+    font-size: 28px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* Стили для тексов */
+.orange-block{
+    padding: 15px;
+    background-color: #F1F1F1;
+    border-left: 5px solid #FE8F1D;
 }
 
 
@@ -1024,6 +1199,9 @@ textarea{
 .marbot-50{
     margin-bottom: 50px;
 }
+.martop-100{
+    margin-top: 100px;
+}
 .marbot-100{
     margin-bottom: 100px;
 }
@@ -1047,4 +1225,14 @@ textarea{
 }
 .bolder-700{
     font-weight: 700;
+}
+.grey-filter{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.text-center{
+    text-align: center;
+}
+.header-little{
+    padding-bottom: 0px;
 }
